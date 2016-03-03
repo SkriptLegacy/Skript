@@ -1,4 +1,5 @@
 /*
+ /*
  *   This file is part of Skript.
  *
  *  Skript is free software: you can redistribute it and/or modify
@@ -15,7 +16,7 @@
  *  along with Skript.  If not, see <http://www.gnu.org/licenses/>.
  * 
  * 
- * Copyright 2011-2014 Peter GÃ¼ttinger
+ * Copyright 2011-2014 Peter Güttinger
  * 
  */
 
@@ -53,7 +54,7 @@ import ch.njol.util.SynchronizedReference;
  * TODO create a metadata table to store some properties (e.g. Skript version, Yggdrasil version) -- but what if some variables cannot be converted? move them to a different table?
  * TODO create my own database connector or find a better one
  * 
- * @author Peter GÃ¼ttinger
+ * @author Peter Güttinger
  */
 public class DatabaseStorage extends VariablesStorage {
 	
@@ -117,6 +118,7 @@ public class DatabaseStorage extends VariablesStorage {
 	
 	private final Type type;
 	
+	@SuppressWarnings("null")
 	final SynchronizedReference<Database> db = new SynchronizedReference<Database>(null);
 	
 	private boolean monitor = false;
@@ -380,10 +382,7 @@ public class DatabaseStorage extends VariablesStorage {
 				sqlException(e);
 				return false;
 			}
-			if (first)
-				return prepareQueries();
-			else
-				return true;
+			return true;
 		}
 	}
 	
@@ -476,7 +475,7 @@ public class DatabaseStorage extends VariablesStorage {
 			if (value != null && value.length > MAX_VALUE_SIZE)
 				Skript.error("The variable {" + name + "} cannot be saved in the database as its value's size (" + value.length + ") exceeds the maximum allowed size of " + MAX_VALUE_SIZE + "! An attempt to save the variable will be made nonetheless.");
 			try {
-				if (!monitor && type == null) {
+				if (type == null) {
 					assert value == null;
 					final PreparedStatement deleteQuery = this.deleteQuery;
 					assert deleteQuery != null;
@@ -500,6 +499,7 @@ public class DatabaseStorage extends VariablesStorage {
 		return true;
 	}
 	
+	@SuppressWarnings("null")
 	@Override
 	public void close() {
 		synchronized (db) {

@@ -100,5 +100,4 @@ public class OcelotData extends EntityData<Ocelot> {
 	public EntityData getSuperType() {
 		return new OcelotData();
 	}
-	
 }

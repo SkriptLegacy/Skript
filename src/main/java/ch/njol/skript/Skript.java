@@ -58,9 +58,6 @@ import org.bukkit.event.server.ServerCommandEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.eclipse.jdt.annotation.Nullable;
 
-import ch.njol.skript.Metrics.Graph;
-import ch.njol.skript.Metrics.Plotter;
-import ch.njol.skript.Updater.UpdateState;
 import ch.njol.skript.aliases.Aliases;
 import ch.njol.skript.bukkitutil.Workarounds;
 import ch.njol.skript.classes.ClassInfo;
@@ -276,8 +273,6 @@ public final class Skript extends JavaPlugin implements Listener {
 		SkriptConfig.load();
 		Language.setUseLocal(true);
 		
-		Updater.start();
-		
 		Aliases.load();
 		
 		Commands.registerListeners();
@@ -394,63 +389,6 @@ public final class Skript extends JavaPlugin implements Listener {
 				
 				EvtSkript.onSkriptStart();
 				
-				final Metrics metrics = new Metrics(Skript.this);
-				final Graph scriptData = metrics.createGraph("data");
-				scriptData.addPlotter(new Plotter("scripts") {
-					@Override
-					public int getValue() {
-						return ScriptLoader.loadedScripts();
-					}
-				});
-				scriptData.addPlotter(new Plotter("triggers") {
-					@Override
-					public int getValue() {
-						return ScriptLoader.loadedTriggers();
-					}
-				});
-				scriptData.addPlotter(new Plotter("commands") {
-					@Override
-					public int getValue() {
-						return ScriptLoader.loadedCommands();
-					}
-				});
-				scriptData.addPlotter(new Plotter("functions") {
-					@Override
-					public int getValue() {
-						return ScriptLoader.loadedFunctions();
-					}
-				});
-				scriptData.addPlotter(new Plotter("variables") {
-					@Override
-					public int getValue() {
-						return Variables.numVariables();
-					}
-				});
-				final Graph language = metrics.createGraph("language");
-				language.addPlotter(new Plotter() {
-					@Override
-					public int getValue() {
-						return 1;
-					}
-					
-					@Override
-					public String getColumnName() {
-						return Language.getName();
-					}
-				});
-				final Graph similarPlugins = metrics.createGraph("similar plugins");
-				for (final String plugin : new String[] {"VariableTriggers", "CommandHelper", "Denizen", "rTriggers", "kTriggers", "TriggerCmds", "BlockScripts", "ScriptBlock", "buscript", "BukkitScript"}) {
-					assert plugin != null;
-					similarPlugins.addPlotter(new Plotter(plugin) {
-						@Override
-						public int getValue() {
-							return Bukkit.getPluginManager().getPlugin(plugin) != null ? 1 : 0;
-						}
-					});
-				}
-				metrics.start();
-				Skript.metrics = metrics;
-				
 				// suppresses the "can't keep up" warning after loading all scripts
 				final Filter f = new Filter() {
 					@Override
@@ -471,29 +409,6 @@ public final class Skript extends JavaPlugin implements Listener {
 				}, 1);
 			}
 		});
-		
-		Bukkit.getPluginManager().registerEvents(new Listener() {
-			@EventHandler
-			public void onJoin(final PlayerJoinEvent e) {
-				if (e.getPlayer().hasPermission("skript.admin")) {
-					new Task(Skript.this, 0) {
-						@Override
-						public void run() {
-							Updater.stateLock.readLock().lock();
-							try {
-								final Player p = e.getPlayer();
-								assert p != null;
-								if ((Updater.state == UpdateState.CHECKED_FOR_UPDATE || Updater.state == UpdateState.DOWNLOAD_ERROR) && Updater.latest.get() != null)
-									info(p, "" + Updater.m_update_available);
-							} finally {
-								Updater.stateLock.readLock().unlock();
-							}
-						}
-					};
-				}
-			}
-		}, this);
-		
 	}
 	
 	private static Version minecraftVersion = new Version(666);
@@ -609,14 +524,6 @@ public final class Skript extends JavaPlugin implements Listener {
 		} catch (final SecurityException e) {
 			return false;
 		}
-	}
-	
-	@Nullable
-	static Metrics metrics;
-	
-	@Nullable
-	public static Metrics getMetrics() {
-		return metrics;
 	}
 	
 	/**

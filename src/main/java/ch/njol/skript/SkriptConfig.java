@@ -73,18 +73,6 @@ public abstract class SkriptConfig {
 				}
 			});
 	
-	final static Option<Boolean> checkForNewVersion = new Option<Boolean>("check for new version", false);
-	final static Option<Timespan> updateCheckInterval = new Option<Timespan>("update check interval", new Timespan(12 * 60 * 60 * 1000))
-			.setter(new Setter<Timespan>() {
-				@Override
-				public void set(final Timespan t) {
-					final Task ct = Updater.checkerTask;
-					if (t.getTicks() != 0 && ct != null && !ct.isAlive())
-						ct.setNextExecution(t.getTicks());
-				}
-			});
-	final static Option<Boolean> automaticallyDownloadNewVersion = new Option<Boolean>("automatically download new version", false);
-	
 	public final static Option<Boolean> enableEffectCommands = new Option<Boolean>("enable effect commands", false);
 	public final static Option<String> effectCommandToken = new Option<String>("effect command token", "!");
 	public final static Option<Boolean> allowOpsToUseEffectCommands = new Option<Boolean>("allow ops to use effect commands", false);
@@ -93,6 +81,7 @@ public abstract class SkriptConfig {
 	public final static OptionSection databases = new OptionSection("databases");
 	
 	public final static Option<Boolean> usePlayerUUIDsInVariableNames = new Option<Boolean>("use player UUIDs in variable names", false); // TODO change to true later (as well as in the default config)
+	public final static Option<Boolean> enablePlayerVariableFix = new Option<Boolean>("player variable fix", true);
 	
 	@SuppressWarnings("null")
 	private final static DateFormat shortDateFormat = DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT);

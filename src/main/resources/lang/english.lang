@@ -37,14 +37,14 @@ genders:
 
 # -- Skript --
 skript:
-	copyright: ~ created by & Â© Peter GÃ¼ttinger aka Njol ~
+	copyright: ~ created by & © Peter GÃ¼ttinger aka Njol ~
 	prefix: <gray>[<gold>Skript<gray>] # not used
 	quotes error: Invalid use of quotes ("). If you want to use quotes in "quoted text", double them: "".
 	brackets error: Invalid amount or placement of brackets. Please make sure that each opening bracket has a corresponding closing bracket.
 	invalid reload: Skript may only be reloaded by either Bukkit's '/reload' or Skript's '/skript reload' command.
 	no scripts: No scripts were found, maybe you should write some ;)
 	no errors: All scripts loaded without errors.
-	scripts loaded: Loaded %s scriptÂ¦Â¦sÂ¦ with a total of %s triggerÂ¦Â¦sÂ¦ and %s commandÂ¦Â¦sÂ¦ in %s
+	scripts loaded: Loaded %s script¦¦s¦ with a total of %s trigger¦¦s¦ and %s command¦¦s¦ in %s
 	finished loading: Finished loading.
 
 # -- Skript command --
@@ -78,7 +78,7 @@ skript command:
 	reload:
 		reloading: Reloading %s...
 		reloaded: Successfully reloaded %s.
-		error: Encountered %2$s errorÂ¦Â¦sÂ¦ while reloading %1$s!
+		error: Encountered %2$s error¦¦s¦ while reloading %1$s!
 		script disabled: <gold>%s<reset> is currently disabled. Use <gray>/<gold>skript <cyan>enable <red>%s<reset> to enable it.
 		
 		config and scripts: the config and all scripts
@@ -87,25 +87,25 @@ skript command:
 		aliases: the aliases
 		script: <gold>%s<reset>
 		scripts in folder: all scripts in <gold>%s<reset>
-		x scripts in folder: <gold>%2$s <reset>scriptÂ¦Â¦sÂ¦ in <gold>%1$s<reset>
+		x scripts in folder: <gold>%2$s <reset>script¦¦s¦ in <gold>%1$s<reset>
 		empty folder: <gold>%s<reset>r does not contain any enabled scripts.
 	enable:
 		all:
 			enabling: Enabling all disabled scripts...
 			enabled: Successfully enabled & parsed all previously disabled scripts.
-			error: Encountered %s errorÂ¦Â¦sÂ¦ while parsing disabled scripts!
+			error: Encountered %s error¦¦s¦ while parsing disabled scripts!
 			io error: Could not load any scripts (some scripts might have been renamed already and will be enabled when the server restarts): %s
 		single:
 			already enabled: <gold>%s<reset> is already enabled! Use <gray>/<gold>skript <cyan>reload <red>%s<reset> to reload it if it was changed.
 			enabling: Enabling <gold>%s<reset>...
 			enabled: Successfully enabled & parsed <gold>%s<reset>.
-			error: Encountered %2$s errorÂ¦Â¦sÂ¦ while parsing <gold>%1$s<red>!
+			error: Encountered %2$s error¦¦s¦ while parsing <gold>%1$s<red>!
 			io error: Could not enable <gold>%s<red>: %s
 		folder:
 			empty: <gold>%s<reset> does not contain any disabled scripts.
-			enabling: Enabling <gold>%2$s <reset>scriptÂ¦Â¦sÂ¦ in <gold>%1$s<reset>...
+			enabling: Enabling <gold>%2$s <reset>script¦¦s¦ in <gold>%1$s<reset>...
 			enabled: Successfully enabled & parsed <gold>%2$s<reset> previously disabled scripts in <gold>%1$s<reset>.
-			error: Encountered %2$s errorÂ¦Â¦sÂ¦ while parsing scripts in <gold>%1$s<red>!
+			error: Encountered %2$s error¦¦s¦ while parsing scripts in <gold>%1$s<red>!
 			io error: Error while enabling scripts in <gold>%s<red> (some scripts might get enabled when the server restarts): %s
 	disable:
 		all:
@@ -123,7 +123,7 @@ skript command:
 		# check/download: see Updater
 		changes:
 			# multiple versions:
-			# 	title: <gold>%s<r> updateÂ¦ hasÂ¦s haveÂ¦ been released since this version (<gold>%s<r>) of Skript:
+			# 	title: <gold>%s<r> update¦ has¦s have¦ been released since this version (<gold>%s<r>) of Skript:
 			# 	footer: To show the changelog of a version type <gold>/skript update changes <version><reset>
 			# invalid version: No changelog for the version <gold>%s<red> available
 			title: <bold><cyan>%s<reset> (%s)
@@ -328,58 +328,58 @@ biomes:
 # -- Tree Types --
 tree types:
 	tree:
-		name: treeÂ¦s
+		name: tree¦s
 		pattern: (any )?trees?
 	regular:
-		name: oakÂ¦s
+		name: oak¦s
 		pattern: (any )?(regular tree|normal tree|oak)s?
 	small_regular:
-		name: small oakÂ¦s
+		name: small oak¦s
 		pattern: small (regular tree|normal tree|oak)s?
 	big_regular:
-		name: big treeÂ¦s
+		name: big tree¦s
 		pattern: (big|large) (regular tree|normal tree|oak)s?
 	redwood:
-		name: redwoodÂ¦s
+		name: redwood¦s
 		pattern: (any )?(fir|pine|spruce|redwood)s?
 	small_redwood:
-		name: small redwoodÂ¦s
+		name: small redwood¦s
 		pattern: small (fir|pine|spruce|redwood)s?
 	big_redwood:
-		name: tall redwoodÂ¦s
+		name: tall redwood¦s
 		pattern: (big|tall) (fir|pine|spruce|redwood)s?
 	jungle:
-		name: jungle treeÂ¦s
+		name: jungle tree¦s
 		pattern: (any )?jungle trees?
 	small_jungle:
-		name: small jungle treeÂ¦s
+		name: small jungle tree¦s
 		pattern: small jungle trees?
 	big_jungle:
-		name: big jungle treeÂ¦s
+		name: big jungle tree¦s
 		pattern: (big|tall|huge|giant|large) jungle trees?
 	jungle_bush:
-		name: bushÂ¦es
+		name: bush¦es
 		pattern: (jungle )?bush(es)?
 	swamp:
-		name: swamp treeÂ¦s
+		name: swamp tree¦s
 		pattern: swamp trees?
 	mushroom:
-		name: huge mushroomÂ¦s
+		name: huge mushroom¦s
 		pattern: (any )?(huge|giant|large|big) mushrooms?
 	red_mushroom:
-		name: huge red mushroomÂ¦s
+		name: huge red mushroom¦s
 		pattern: (huge|giant|large|big) red mushrooms?
 	brown_mushroom:
-		name: huge brown mushroomÂ¦s
+		name: huge brown mushroom¦s
 		pattern: (huge|giant|large|big) brown mushrooms?
 
 # -- Time --
 time:
-	tick: tickÂ¦s
-	second: secondÂ¦s
-	minute: minuteÂ¦s
-	hour: hourÂ¦s
-	day: dayÂ¦s
+	tick: tick¦s
+	second: second¦s
+	minute: minute¦s
+	hour: hour¦s
+	day: day¦s
 	real: real, rl, irl
 	minecraft: mc, minecraft
 	errors:
@@ -449,7 +449,7 @@ chat styles:
 
 # -- Directions --
 directions:
-	meter: meterÂ¦s
+	meter: meter¦s
 	
 	at: at
 	
@@ -469,278 +469,321 @@ directions:
 
 # -- Entities --
 # about patterns:
-#	the marks (1Â¦..) are only required in the english file, i.e. you can use (..|..) or [..] for plurals in other languages
-#	the exception to this rule is the 'age pattern' and the corresponding marks (4Â¦ and 8Â¦)
+#	the marks (1¦..) are only required in the english file, i.e. you can use (..|..) or [..] for plurals in other languages
+#	the exception to this rule is the 'age pattern' and the corresponding marks (4¦ and 8¦)
 entities:
-	age pattern: (|4Â¦baby|4Â¦young|8Â¦adult|8Â¦grown(-| )up)
+	age pattern: (|4¦baby|4¦young|8¦adult|8¦grown(-| )up)
 	age adjectives:
 		baby: baby
 		adult: adult
 	entity:
-		name: entitÂ¦yÂ¦ies @an
-		pattern: <age> entit(y|1Â¦ies)
+		name: entit¦y¦ies @an
+		pattern: <age> entit(y|1¦ies)
 	living entity:
-		name: living entitÂ¦yÂ¦ies
-		pattern: <age> living entit(y|1Â¦ies)
+		name: living entit¦y¦ies
+		pattern: <age> living entit(y|1¦ies)
 	projectile:
-		name: projectileÂ¦s
-		pattern: projectile(|1Â¦s)
+		name: projectile¦s
+		pattern: projectile(|1¦s)
 	creature:
-		name: creatureÂ¦s
-		pattern: <age> creature(|1Â¦s)
+		name: creature¦s
+		pattern: <age> creature(|1¦s)
 	human:
-		name: humanÂ¦s
-		pattern: human(|1Â¦s)
+		name: human¦s
+		pattern: human(|1¦s)
 	arrow:
-		name: arrowÂ¦s @an
-		pattern: arrow(|1Â¦s)
+		name: arrow¦s @an
+		pattern: arrow(|1¦s)
 	bat:
-		name: batÂ¦s
-		pattern: <age> bat(|1Â¦s)
+		name: bat¦s
+		pattern: <age> bat(|1¦s)
 	boat:
-		name: boatÂ¦s
-		pattern: boat(|1Â¦s)
+		name: boat¦s
+		pattern: boat(|1¦s)
 	blaze:
-		name: blazeÂ¦s
-		pattern: blaze(|1Â¦s)
+		name: blaze¦s
+		pattern: blaze(|1¦s)
 	chicken:
-		name: chickenÂ¦s
-		pattern: <age> chicken(|1Â¦s)|(4Â¦)chick(|1Â¦s)
+		name: chicken¦s
+		pattern: <age> chicken(|1¦s)|(4¦)chick(|1¦s)
 	cow:
-		name: cowÂ¦s
-		pattern: <age> cow(|1Â¦s)|(4Â¦)cal(f|1Â¦ves)
+		name: cow¦s
+		pattern: <age> cow(|1¦s)|(4¦)cal(f|1¦ves)
 	cave spider:
-		name: cave spiderÂ¦s
-		pattern: cave[ ]spider(|1Â¦s)
+		name: cave spider¦s
+		pattern: cave[ ]spider(|1¦s)
 	creeper:
-		name: creeperÂ¦s
-		pattern: creeper(|1Â¦s)
+		name: creeper¦s
+		pattern: creeper(|1¦s)
 	unpowered creeper:
-		name: unpowered creeperÂ¦s @an
-		pattern: unpowered creeper(|1Â¦s)
+		name: unpowered creeper¦s @an
+		pattern: unpowered creeper(|1¦s)
 	powered creeper:
-		name: powered creeperÂ¦s
-		pattern: powered creeper(|1Â¦s)
+		name: powered creeper¦s
+		pattern: powered creeper(|1¦s)
 	egg:
-		name: eggÂ¦s @an
-		pattern: egg(|1Â¦s)
+		name: egg¦s @an
+		pattern: egg(|1¦s)
 	enderman:
-		name: enderÂ¦manÂ¦men @an
-		pattern: enderm(a|1Â¦e)n [(carrying|holding) %-itemtype%]
+		name: ender¦man¦men @an
+		pattern: enderm(a|1¦e)n [(carrying|holding) %-itemtype%]
 		format: %1$s holding %2$s
 	ender crystal:
-		name: ender crystalÂ¦s @an
-		pattern: end[er][ ]crystal(|1Â¦s)
+		name: ender crystal¦s @an
+		pattern: end[er][ ]crystal(|1¦s)
 	ender dragon:
-		name: ender dragonÂ¦s @an
-		pattern: ender[ ]dragon(|1Â¦s)
+		name: ender dragon¦s @an
+		pattern: ender[ ]dragon(|1¦s)
 	ender pearl:
-		name: ender pearlÂ¦s @an
-		pattern: ender[ ]pearl(|1Â¦s)
+		name: ender pearl¦s @an
+		pattern: ender[ ]pearl(|1¦s)
 	fireball:
-		name: fireballÂ¦s
-		pattern: [(ghast|big)] fire[ ]ball(|1Â¦s)
+		name: fireball¦s
+		pattern: [(ghast|big)] fire[ ]ball(|1¦s)
 	small fireball:
-		name: small fireballÂ¦s
-		pattern: (small|blaze) fire[ ]ball(|1Â¦s)
+		name: small fireball¦s
+		pattern: (small|blaze) fire[ ]ball(|1¦s)
 	any fireball:
-		name: any fireballÂ¦s
-		pattern: any fire[ ]ball(|1Â¦s)
+		name: any fireball¦s
+		pattern: any fire[ ]ball(|1¦s)
 	fish:
-		name: fishÂ¦es
-		pattern: fish(|1Â¦es)
+		name: fish¦es
+		pattern: fish(|1¦es)
 	ghast:
-		name: ghastÂ¦s
-		pattern: ghast(|1Â¦s)
+		name: ghast¦s
+		pattern: ghast(|1¦s)
 	giant:
-		name: giantÂ¦s
-		pattern: giant(|1Â¦s)
+		name: giant¦s
+		pattern: giant(|1¦s)
 	iron golem:
-		name: iron golemsÂ¦s @an
-		pattern: iron golem(|1Â¦s)
+		name: iron golems¦s @an
+		pattern: iron golem(|1¦s)
 	item frame:
-		name: item frameÂ¦s @an
-		pattern: item[ ]frame(|1Â¦s)
+		name: item frame¦s @an
+		pattern: item[ ]frame(|1¦s)
 	magma cube:
-		name: magma cubeÂ¦s
-		pattern: magma (cube|slime)(|1Â¦s)
+		name: magma cube¦s
+		pattern: magma (cube|slime)(|1¦s)
 	minecart:
-		name: minecartÂ¦s
-		pattern: [mine]cart(|1Â¦s)
+		name: minecart¦s
+		pattern: [mine]cart(|1¦s)
 	regular minecart:
-		name: regular minecartÂ¦s
-		pattern: regular [mine]cart(|1Â¦s)
+		name: regular minecart¦s
+		pattern: regular [mine]cart(|1¦s)
 	storage minecart:
-		name: storage minecartÂ¦s
-		pattern: storage [mine]cart(|1Â¦s)|[mine]cart(|1Â¦s) with chest[s]
+		name: storage minecart¦s
+		pattern: storage [mine]cart(|1¦s)|[mine]cart(|1¦s) with chest[s]
 	powered minecart:
-		name: powered minecartÂ¦s
-		pattern: powered [mine]cart(|1Â¦s)|[mine]cart(|1Â¦s) with furnace[s]
+		name: powered minecart¦s
+		pattern: powered [mine]cart(|1¦s)|[mine]cart(|1¦s) with furnace[s]
 	hopper minecart:
-		name: hopper minecartÂ¦s
-		pattern: hopper [mine]cart(|1Â¦s)|[mine]cart(|1Â¦s) with hopper[s]
+		name: hopper minecart¦s
+		pattern: hopper [mine]cart(|1¦s)|[mine]cart(|1¦s) with hopper[s]
 	explosive minecart:
-		name: explosive minecartÂ¦s
-		pattern: explosive [mine]cart(|1Â¦s)|[mine]cart(|1Â¦s) with TNT[s]
+		name: explosive minecart¦s
+		pattern: explosive [mine]cart(|1¦s)|[mine]cart(|1¦s) with TNT[s]
 	spawner minecart:
-		name: spawner minecartÂ¦s
-		pattern: (monster|mob|) spawner [mine]cart(|1Â¦s)|[mine]cart(|1Â¦s) with (monster|mob|) spawner[s]
+		name: spawner minecart¦s
+		pattern: (monster|mob|) spawner [mine]cart(|1¦s)|[mine]cart(|1¦s) with (monster|mob|) spawner[s]
 	mooshroom:
-		name: mooshroomÂ¦s
-		pattern: <age> mooshroom(|1Â¦s)
+		name: mooshroom¦s
+		pattern: <age> mooshroom(|1¦s)
 	ocelot:
-		name: ocelotÂ¦s @an
-		pattern: <age> ocelot(|1Â¦s)
+		name: ocelot¦s @an
+		pattern: <age> ocelot(|1¦s)
 	wild ocelot:
-		name: wild ocelotÂ¦s
-		pattern: (wild|untamed) <age> ocelot(|1Â¦s)
+		name: wild ocelot¦s
+		pattern: (wild|untamed) <age> ocelot(|1¦s)
 	cat:
-		name: catÂ¦s
-		pattern: <age> cat(|1Â¦s)|tamed <age> ocelot(|1Â¦s)|(4Â¦)kitten(|1Â¦s)
+		name: cat¦s
+		pattern: <age> cat(|1¦s)|tamed <age> ocelot(|1¦s)|(4¦)kitten(|1¦s)
 	painting:
-		name: paintingÂ¦s
-		pattern: painting(|1Â¦s)
+		name: painting¦s
+		pattern: painting(|1¦s)
 	pig:
-		name: pigÂ¦s
-		pattern: <age> pig(|1Â¦s)|(4Â¦)piglet(|1Â¦s)
+		name: pig¦s
+		pattern: <age> pig(|1¦s)|(4¦)piglet(|1¦s)
 	saddled pig:
-		name: saddled pigÂ¦s
-		pattern: saddled pig(|1Â¦s)
+		name: saddled pig¦s
+		pattern: saddled pig(|1¦s)
 	unsaddled pig:
-		name: unsaddled pigÂ¦s @an
-		pattern: unsaddled pig(|1Â¦s)
+		name: unsaddled pig¦s @an
+		pattern: unsaddled pig(|1¦s)
 	player:
-		name: playerÂ¦s
-		pattern: player(|1Â¦s)
+		name: player¦s
+		pattern: player(|1¦s)
 	op:
-		name: opÂ¦s @an
-		pattern: op(|1Â¦s)
+		name: op¦s @an
+		pattern: op(|1¦s)
 	non-op:
-		name: non-opÂ¦s
-		pattern: non(-| |)op(|1Â¦s)
+		name: non-op¦s
+		pattern: non(-| |)op(|1¦s)
 	zombie pigman:
-		name: zombie pigÂ¦manÂ¦men
-		pattern: <age> zombie pigm(an|1Â¦en)|(4Â¦)zombie pigletboy(|1Â¦s)
+		name: zombie pig¦man¦men
+		pattern: <age> zombie pigm(an|1¦en)|(4¦)zombie pigletboy(|1¦s)
 	sheep:
 		name: sheep
 		# while sheep is ambiguous, sheeps is plural (even though it's wrong)
-		pattern: [%-colors%] <age> sheep(2Â¦|1Â¦s)|(4Â¦)[%-colors%] lamb(|1Â¦s)
+		pattern: [%-colors%] <age> sheep(2¦|1¦s)|(4¦)[%-colors%] lamb(|1¦s)
 	unsheared sheep:
 		name: unsheared sheep @an
-		pattern: unsheared [%-colors%] sheep(2Â¦|1Â¦s)
+		pattern: unsheared [%-colors%] sheep(2¦|1¦s)
 	sheared sheep:
 		name: sheared sheep
-		pattern: sheared [%-colors%] sheep(2Â¦|1Â¦s)
+		pattern: sheared [%-colors%] sheep(2¦|1¦s)
 	silverfish:
-		name: silverfishÂ¦es
-		pattern: silverfish(|1Â¦es)
+		name: silverfish¦es
+		pattern: silverfish(|1¦es)
 	skeleton:
-		name: skeletonÂ¦s
-		pattern: skeleton(|1Â¦s)
+		name: skeleton¦s
+		pattern: skeleton(|1¦s)
 	slime:
-		name: slimeÂ¦s
-		pattern: slime(|1Â¦s)
+		name: slime¦s
+		pattern: slime(|1¦s)
 	snowball:
-		name: snowballÂ¦s
-		pattern: snowball(|1Â¦s)
+		name: snowball¦s
+		pattern: snowball(|1¦s)
 	snow golem:
-		name: snow golemÂ¦s
-		pattern: snow[ ](golem(|1Â¦s)|m(an|1Â¦en))
+		name: snow golem¦s
+		pattern: snow[ ](golem(|1¦s)|m(an|1¦en))
 	spider:
-		name: spiderÂ¦s
-		pattern: spider(|1Â¦s)
+		name: spider¦s
+		pattern: spider(|1¦s)
 	squid:
-		name: squidÂ¦s
-		pattern: squid(|1Â¦s)
+		name: squid¦s
+		pattern: squid(|1¦s)
 	bottle of enchanting:
-		name: bottleÂ¦ of enchantingÂ¦s of enchanting
-		pattern: [thrown] bottle(|1Â¦s) o(f|') enchanting|[e]xp[erience] bottle(|1Â¦s)
+		name: bottle¦ of enchanting¦s of enchanting
+		pattern: [thrown] bottle(|1¦s) o(f|') enchanting|[e]xp[erience] bottle(|1¦s)
 	tnt:
 		name: TNT
-		pattern: ([primed] TNT(2Â¦|1Â¦s)|TNT entit(y|1Â¦ies))
+		pattern: ([primed] TNT(2¦|1¦s)|TNT entit(y|1¦ies))
 	villager:
-		name: villagerÂ¦s
-		pattern: <age> villager(|1Â¦s)|(4Â¦)[villager] (kid(|1Â¦s)|child(|1Â¦ren))
+		name: villager¦s
+		pattern: <age> villager(|1¦s)|(4¦)[villager] (kid(|1¦s)|child(|1¦ren))
 	farmer:
-		name: farmerÂ¦s
-		pattern: <age> farmer(|1Â¦s)|(4Â¦)farmer (kid(|1Â¦s)|child(|1Â¦ren))
+		name: farmer¦s
+		pattern: <age> farmer(|1¦s)|(4¦)farmer (kid(|1¦s)|child(|1¦ren))
 	librarian:
-		name: librarianÂ¦s
-		pattern: <age> librarian(|1Â¦s)|(4Â¦)librarian (kid(|1Â¦s)|child(|1Â¦ren))
+		name: librarian¦s
+		pattern: <age> librarian(|1¦s)|(4¦)librarian (kid(|1¦s)|child(|1¦ren))
 	priest:
-		name: priestÂ¦s
-		pattern: <age> priest(|1Â¦s)|(4Â¦)priest (kid(|1Â¦s)|child(|1Â¦ren))
+		name: priest¦s
+		pattern: <age> priest(|1¦s)|(4¦)priest (kid(|1¦s)|child(|1¦ren))
 	blacksmith:
-		name: blacksmithÂ¦s
-		pattern: <age> [black]smith(|1Â¦s)|(4Â¦)[black]smith (kid(|1Â¦s)|child(|1Â¦ren))
+		name: blacksmith¦s
+		pattern: <age> [black]smith(|1¦s)|(4¦)[black]smith (kid(|1¦s)|child(|1¦ren))
 	butcher:
-		name: butcherÂ¦s
-		pattern: <age> butcher(|1Â¦s)|(4Â¦)butcher (kid(|1Â¦s)|child(|1Â¦ren))
+		name: butcher¦s
+		pattern: <age> butcher(|1¦s)|(4¦)butcher (kid(|1¦s)|child(|1¦ren))
 	witch:
-		name: witchÂ¦es
-		pattern: witch(|1Â¦es)
+		name: witch¦es
+		pattern: witch(|1¦es)
 	wither:
-		name: witherÂ¦s
-		pattern: wither(|1Â¦s)
+		name: wither¦s
+		pattern: wither(|1¦s)
 	wither skeleton:
-		name: wither skeletonÂ¦s
-		pattern: wither skeleton(|1Â¦s)
+		name: wither skeleton¦s
+		pattern: wither skeleton(|1¦s)
 	wither skull:
-		name: wither skullÂ¦s
-		pattern: wither skull((|1Â¦s)| projectile(|1Â¦s))
+		name: wither skull¦s
+		pattern: wither skull((|1¦s)| projectile(|1¦s))
 	wolf:
-		name: wolÂ¦fÂ¦ves
-		pattern: <age> wol(f|1Â¦ves)
+		name: wol¦f¦ves
+		pattern: <age> wol(f|1¦ves)
 	tamed wolf:
-		name: tamed wolÂ¦fÂ¦ves
-		pattern: <age> dog(|1Â¦s)|tamed <age> wol(f|1Â¦ves)|(4Â¦)pupp(y|1Â¦ies)
+		name: tamed wol¦f¦ves
+		pattern: <age> dog(|1¦s)|tamed <age> wol(f|1¦ves)|(4¦)pupp(y|1¦ies)
 	wild wolf:
-		name: wild wolÂ¦fÂ¦ves
-		pattern: (wild|untamed) <age> wol(f|1Â¦ves)
+		name: wild wol¦f¦ves
+		pattern: (wild|untamed) <age> wol(f|1¦ves)
 	angry wolf:
-		name: angry wolÂ¦fÂ¦ves @an
-		pattern: (angry|aggressive) <age> wol(f|1Â¦ves)
+		name: angry wol¦f¦ves @an
+		pattern: (angry|aggressive) <age> wol(f|1¦ves)
 	peaceful wolf:
-		name: peaceful wolÂ¦fÂ¦ves
-		pattern: (peaceful|neutral|unaggressive) <age> wol(f|1Â¦ves)
+		name: peaceful wol¦f¦ves
+		pattern: (peaceful|neutral|unaggressive) <age> wol(f|1¦ves)
 	zombie:
-		name: zombieÂ¦s
-		pattern: <age> zombie(|1Â¦s)|(4Â¦)zombie (kid(|1Â¦s)|child(|1Â¦ren))
+		name: zombie¦s
+		pattern: <age> zombie(|1¦s)|(4¦)zombie (kid(|1¦s)|child(|1¦ren))
 	xp-orb:
-		name: exprerience orbÂ¦s @an
-		pattern: ([e]xp|experience)( |-)orb(|1Â¦s)
+		name: exprerience orb¦s @an
+		pattern: ([e]xp|experience)( |-)orb(|1¦s)
 		format: %2$s-%1$s
 	firework:
-		name: firework rocketÂ¦s
-		pattern: firework(|1Â¦s) [rocket(|1Â¦s)]
+		name: firework rocket¦s
+		pattern: firework(|1¦s) [rocket(|1¦s)]
 	falling block:
-		name: falling blockÂ¦s
-		pattern: falling (block(|1Â¦s)|(2Â¦)%-itemtype%)
+		name: falling block¦s
+		pattern: falling (block(|1¦s)|(2¦)%-itemtype%)
 		adjective: falling
 		not a block error: Falling blocks must be blocks, not items
 	thrown potion:
-		name: thrown potionÂ¦s
-		pattern: thrown (potion(|1Â¦s)|(Â¦2)%-itemtypes%)
+		name: thrown potion¦s
+		pattern: thrown (potion(|1¦s)|(¦2)%-itemtypes%)
 		adjective: thrown
 	dropped item:
-		name: dropped itemÂ¦s
-		pattern: dropped (item(|1Â¦s)|(Â¦2)%-itemtypes%)|item entit(y|1Â¦ies)
+		name: dropped item¦s
+		pattern: dropped (item(|1¦s)|(¦2)%-itemtypes%)|item entit(y|1¦ies)
 		adjective: dropped
 	horse:
-		name: horseÂ¦s
-		pattern: <age> horse(|1Â¦s)|(4Â¦)foal(|1Â¦s)
+		name: horse¦s
+		pattern: <age> horse(|1¦s)|(4¦)foal(|1¦s)
 	donkey:
-		name: donkeyÂ¦s
-		pattern: <age> donkey(|1Â¦s)
+		name: donkey¦s
+		pattern: <age> donkey(|1¦s)
 	mule:
-		name: muleÂ¦s
-		pattern: <age> mule(|1Â¦s)
+		name: mule¦s
+		pattern: <age> mule(|1¦s)
 	undead horse:
-		name: undead horseÂ¦s @an
-		pattern: <age> undead horse(|1Â¦s)|undead <age> horse(|1Â¦s)|undead (4Â¦)foal(|1Â¦s)
+		name: undead horse¦s @an
+		pattern: <age> undead horse(|1¦s)|undead <age> horse(|1¦s)|undead (4¦)foal(|1¦s)
 	skeleton horse:
-		name: skeleton horseÂ¦s
-		pattern: <age> skeleton horse(|1Â¦s)|skeleton <age> horse(|1Â¦s)|skeleton (4Â¦)foal(|1Â¦s)
+		name: skeleton horse¦s
+		pattern: <age> skeleton horse(|1¦s)|skeleton <age> horse(|1¦s)|skeleton (4¦)foal(|1¦s)
+	elder guardian:
+		name: elder guardian¦s
+		pattern: elder guardian(|1¦s)
+	guardian:
+		name: guardian¦s
+		pattern: guardian(|1¦s)
+	normal guardian:
+		name: normal guardian¦s
+		pattern: normal guardian(|1¦s)
+	rabbit:
+		name: rabbit¦s
+		pattern: <age> rabbit(|1¦s)|rabbit <age>(|1¦s)
+	brown rabbit:
+		name: rabbit¦s
+		pattern: brown <age> rabbit(|1¦s)|brown rabbit <age>(|1¦s)
+	black and white rabbit:
+		name: rabbit¦s
+		pattern: black [and] white <age> rabbit(|1¦s)|black [and] white rabbit <age>(|1¦s)
+	white rabbit:
+		name: rabbit¦s
+		pattern: white <age> rabbit(|1¦s)|white rabbit <age>(|1¦s)
+	black rabbit:
+		name: rabbit¦s
+		pattern: black <age> rabbit(|1¦s)|black rabbit <age>(|1¦s)
+	gold rabbit:
+		name: rabbit¦s
+		pattern: gold <age> rabbit(|1¦s)|gold rabbit <age>(|1¦s)
+	salt and pepper rabbit:
+		name: rabbit¦s
+		pattern: salt [and] pepper <age> rabbit(|1¦s)|salt [and] pepper rabbit <age>(|1¦s)
+	killer rabbit:
+		name: rabbit¦s
+		pattern: killer <age> rabbit(|1¦s)|killer rabbit <age>(|1¦s)
+	fish hook:
+		name: fish hook¦s
+		pattern: fish hook(|1¦s)
+	armor stand:
+		name: armor stand¦s
+		pattern: armor stand(|1¦s)
+	endermite:
+		name: endermite¦s
+		pattern: endermite(|1¦s)
+
 
 # -- Damage Causes --
 damage causes:
@@ -815,60 +858,60 @@ boolean:
 # -- Types --
 types:
 	# Java
-	object: objectÂ¦s @an
-	number: numberÂ¦s @a
-	integer: integerÂ¦s @an
-	long: integerÂ¦s @an
-	short: integerÂ¦s @an
-	byte: integerÂ¦s @an
-	double: numberÂ¦s @a
-	float: numberÂ¦s @a
-	boolean: booleanÂ¦ (yes/no)Â¦s (yes/no) @a
-	string: textÂ¦s @a
-	chunk: chunkÂ¦s @a
+	object: object¦s @an
+	number: number¦s @a
+	integer: integer¦s @an
+	long: integer¦s @an
+	short: integer¦s @an
+	byte: integer¦s @an
+	double: number¦s @a
+	float: number¦s @a
+	boolean: boolean¦ (yes/no)¦s (yes/no) @a
+	string: text¦s @a
+	chunk: chunk¦s @a
 	
 	# Bukkit
-	entity: entitÂ¦yÂ¦ies @an
-	livingentity: living entitÂ¦yÂ¦ies @a
-	projectile: projectileÂ¦s @a
-	block: blockÂ¦s @a
-	location: locationÂ¦s @a
-	world: worldÂ¦s @a
-	inventory: inventorÂ¦yÂ¦ies @an
-	player: playerÂ¦s @a
-	offlineplayer: offline playerÂ¦s @a
-	commandsender: playerÂ¦Â¦sÂ¦/console @a
-	inventoryholder: inventory holderÂ¦s @an
-	gamemode: gamemodeÂ¦s @a
-	itemstack: item stackÂ¦s @an
-	itementity: dropped itemÂ¦s @a # same as entities.dropped item.name
-	biome: biomeÂ¦s @a
-	potioneffecttype: potionÂ¦s @a
-	enchantment: enchantmentÂ¦s @an
-	damagecause: damage causeÂ¦s @a
+	entity: entit¦y¦ies @an
+	livingentity: living entit¦y¦ies @a
+	projectile: projectile¦s @a
+	block: block¦s @a
+	location: location¦s @a
+	world: world¦s @a
+	inventory: inventor¦y¦ies @an
+	player: player¦s @a
+	offlineplayer: offline player¦s @a
+	commandsender: player¦¦s¦/console @a
+	inventoryholder: inventory holder¦s @an
+	gamemode: gamemode¦s @a
+	itemstack: item stack¦s @an
+	itementity: dropped item¦s @a # same as entities.dropped item.name
+	biome: biome¦s @a
+	potioneffecttype: potion¦s @a
+	enchantment: enchantment¦s @an
+	damagecause: damage cause¦s @a
 	
 	# Skript
-	weathertype: weather typeÂ¦s @a
-	entitytype: entity typeÂ¦s @an
-	entitydata: entity typeÂ¦s @an
-	itemtype: item typeÂ¦s @an
-	time: timeÂ¦s @a
-	timespan: time spanÂ¦s @a
-	timeperiod: time periodÂ¦s @a
-	date: dateÂ¦s @a
-	direction: directionÂ¦s @a
-	slot: slotÂ¦s @a
-	color: colorÂ¦s @a
-	structuretype: tree typeÂ¦s @a
-	enchantmenttype: enchantment typeÂ¦s @an
-	experience: experience pointÂ¦s @an
+	weathertype: weather type¦s @a
+	entitytype: entity type¦s @an
+	entitydata: entity type¦s @an
+	itemtype: item type¦s @an
+	time: time¦s @a
+	timespan: time span¦s @a
+	timeperiod: time period¦s @a
+	date: date¦s @a
+	direction: direction¦s @a
+	slot: slot¦s @a
+	color: color¦s @a
+	structuretype: tree type¦s @a
+	enchantmenttype: enchantment type¦s @an
+	experience: experience point¦s @an
 	experience.pattern: (e?xp|experience( points?)?)
-	classinfo: typeÂ¦s @a
-	visualeffect: visual effectÂ¦s @a
+	classinfo: type¦s @a
+	visualeffect: visual effect¦s @a
 	
 	# Hooks
 	money: money
-	region: regionÂ¦s
+	region: region¦s
 
 # -- IO Exceptions --
 io exceptions:

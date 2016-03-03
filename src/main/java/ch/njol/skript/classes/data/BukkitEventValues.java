@@ -61,8 +61,6 @@ import org.bukkit.event.hanging.HangingEvent;
 import org.bukkit.event.hanging.HangingPlaceEvent;
 import org.bukkit.event.inventory.CraftItemEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
-import org.bukkit.event.painting.PaintingEvent;
-import org.bukkit.event.painting.PaintingPlaceEvent;
 import org.bukkit.event.player.PlayerBedEnterEvent;
 import org.bukkit.event.player.PlayerBedLeaveEvent;
 import org.bukkit.event.player.PlayerBucketEmptyEvent;
@@ -581,29 +579,6 @@ public final class BukkitEventValues {
 				@Override
 				@Nullable
 				public Player get(final HangingPlaceEvent e) {
-					return e.getPlayer();
-				}
-			}, 0);
-		} else {
-			EventValues.registerEventValue(PaintingEvent.class, Painting.class, new Getter<Painting, PaintingEvent>() {
-				@Override
-				@Nullable
-				public Painting get(final PaintingEvent e) {
-					return e.getPainting();
-				}
-			}, 0);
-			EventValues.registerEventValue(PaintingEvent.class, World.class, new Getter<World, PaintingEvent>() {
-				@Override
-				@Nullable
-				public World get(final PaintingEvent e) {
-					return e.getPainting().getWorld();
-				}
-			}, 0);
-			// PaintingPlaceEvent
-			EventValues.registerEventValue(PaintingPlaceEvent.class, Player.class, new Getter<Player, PaintingPlaceEvent>() {
-				@Override
-				@Nullable
-				public Player get(final PaintingPlaceEvent e) {
 					return e.getPlayer();
 				}
 			}, 0);

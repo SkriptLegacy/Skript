@@ -385,5 +385,10 @@ public class BlockStateBlock implements Block {
 		}
 		return loc;
 	}
+
+	@Override
+	public void setType(Material material, boolean set) {
+		
+	}
 	
 }

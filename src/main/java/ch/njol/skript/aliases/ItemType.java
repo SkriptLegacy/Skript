@@ -856,12 +856,20 @@ public class ItemType implements Unit, Iterable<ItemData>, Container<ItemStack>,
 	 * @return Whether everything could be added to the inventory
 	 */
 	public boolean addTo(final Inventory invi) {
-		// important: don't use inventory.add() - it ignores max stack sizes
+		
+		
+		//important: don't use inventory.add() - it ignores max stack sizes
 		final ItemStack[] buf = invi.getContents();
+		
 		if (buf == null)
 			return false;
+		
+		
 		final boolean b = addTo(buf);
-		invi.setContents(buf);
+		for(int i = 0; i < buf.length; i++)
+		{
+			invi.setItem(i, buf[i]);
+		}
 		return b;
 	}
 	
