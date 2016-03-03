@@ -24,7 +24,7 @@ package ch.njol.skript.localization;
 import ch.njol.util.StringUtils;
 
 /**
- * An {@link ArgsMessage} that pluralises words following numbers. The plurals have to be in the format <tt>shelÂ¦fÂ¦vesÂ¦</tt> (i.e. use 3 'Â¦'s).
+ * An {@link ArgsMessage} that pluralises words following numbers. The plurals have to be in the format <tt>shel¦f¦ves¦</tt> (i.e. use 3 '¦'s).
  * 
  * @author Peter GÃ¼ttinger
  */
@@ -49,11 +49,11 @@ public class PluralizingArgsMessage extends Message {
 			if ('0' <= s.charAt(i) && s.charAt(i) <= '9') {
 				if (Math.abs(StringUtils.numberAfter(s, i)) != 1)
 					plural = true;
-			} else if (s.charAt(i) == 'Â¦') {
-				final int c1 = s.indexOf('Â¦', i + 1);
+			} else if (s.charAt(i) == '¦') {
+				final int c1 = s.indexOf('¦', i + 1);
 				if (c1 == -1)
 					break;
-				final int c2 = s.indexOf('Â¦', c1 + 1);
+				final int c2 = s.indexOf('¦', c1 + 1);
 				if (c2 == -1)
 					break;
 				b.append(s.substring(last, i));

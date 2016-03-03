@@ -222,9 +222,9 @@ public class Noun extends Message {
 	public static NonNullPair<String, String> getPlural(final String s) {
 		final NonNullPair<String, String> r = new NonNullPair<String, String>("", "");
 		int part = 3; // 1 = singular, 2 = plural, 3 = both
-		int i = StringUtils.count(s, 'Â¦');
+		int i = StringUtils.count(s, '¦');
 		int last = 0, c = -1;
-		while ((c = s.indexOf('Â¦', c + 1)) != -1) {
+		while ((c = s.indexOf('¦', c + 1)) != -1) {
 			final String x = s.substring(last, c);
 			if ((part & 1) != 0)
 				r.setFirst(r.getFirst() + x);
@@ -251,20 +251,20 @@ public class Noun extends Message {
 	 * @return The same string with normalized plural markers
 	 */
 	public static String normalizePluralMarkers(final String s) {
-		final int c = StringUtils.count(s, 'Â¦');
+		final int c = StringUtils.count(s, '¦');
 		if (c % 3 == 0)
 			return s;
 		if (c % 3 == 2) {
 			final int g = s.lastIndexOf('@');
 			if (g == -1)
-				return s + "Â¦";
-			return s.substring(0, g) + "Â¦" + s.substring(g);
+				return s + "¦";
+			return s.substring(0, g) + "¦" + s.substring(g);
 		}
-		final int x = s.lastIndexOf('Â¦');
+		final int x = s.lastIndexOf('¦');
 		final int g = s.lastIndexOf('@');
 		if (g == -1)
-			return s.substring(0, x) + "Â¦" + s.substring(x) + "Â¦";
-		return s.substring(0, x) + "Â¦" + s.substring(x, g) + "Â¦" + s.substring(g);
+			return s.substring(0, x) + "¦" + s.substring(x) + "¦";
+		return s.substring(0, x) + "¦" + s.substring(x, g) + "¦" + s.substring(g);
 	}
 	
 	final static HashMap<String, Integer> genders = new HashMap<String, Integer>();

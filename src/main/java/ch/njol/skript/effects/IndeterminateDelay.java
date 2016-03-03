@@ -44,7 +44,7 @@ public class IndeterminateDelay extends Delay {
 		final TriggerItem next = getNext();
 		if (next != null) {
 			delayed.add(e);
-			final Timespan d = duration.getSingle(e);
+			final Timespan d = getDuration().getSingle(e);
 			if (d == null)
 				return null;
 			Bukkit.getScheduler().scheduleSyncDelayedTask(Skript.getInstance(), new Runnable() {

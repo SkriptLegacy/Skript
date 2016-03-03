@@ -15,7 +15,7 @@
  *  along with Skript.  If not, see <http://www.gnu.org/licenses/>.
  * 
  * 
- * Copyright 2011, 2012 Peter GÃ¼ttinger
+ * Copyright 2011, 2012 Peter Güttinger
  * 
  */
 
@@ -50,7 +50,7 @@ import ch.njol.util.Kleenean;
 import ch.njol.util.NonNullPair;
 
 /**
- * @author Peter GÃ¼ttinger
+ * @author Peter Güttinger
  */
 @Name("Parse")
 @Description({"Parses text as a given type, or as a given pattern.",
@@ -103,7 +103,7 @@ public class ExprParse extends SimpleExpression<Object> {
 				Skript.error("Invalid amount and/or placement of double quotes in '" + pattern + "'", ErrorQuality.SEMANTIC_ERROR);
 				return false;
 			}
-			// escape 'Â¦'
+			// escape '¦'
 			final StringBuilder b = new StringBuilder(pattern.length());
 			for (int i = 0; i < pattern.length(); i++) {
 				final char c = pattern.charAt(i);
@@ -111,8 +111,8 @@ public class ExprParse extends SimpleExpression<Object> {
 					b.append(c);
 					b.append(pattern.charAt(i + 1));
 					i++;
-				} else if (c == 'Â¦') {
-					b.append("\\Â¦");
+				} else if (c == '¦') {
+					b.append("\\¦");
 				} else {
 					b.append(c);
 				}

@@ -1,5 +1,5 @@
 # Default German language file by Peter Güttinger (Njol)
-version: ${project.version}
+version: 2.1.12
 
 # -- General --
 and: und
@@ -224,7 +224,6 @@ enchantments:
 		luck: des Glücks des Meeres, Glück des Meeres
 		unknown_enchant_62: des Köders, Köder
 		lure: des Köders, Köder
-		unknown_enchant_8: des Wasserläufers, Wasserläufer
 
 # -- Potion Effects --
 potions:
@@ -772,7 +771,6 @@ game modes:
 	survival: Überlebensmodus
 	creative: Kreativmodus
 	adventure: Abenteuermodus
-	spectator: Zuschauermodus
 
 # -- Visual Effects --
 visual effects:

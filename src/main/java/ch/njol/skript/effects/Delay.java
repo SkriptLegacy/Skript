@@ -61,7 +61,7 @@ public class Delay extends Effect {
 	@SuppressWarnings({"unchecked", "null"})
 	@Override
 	public boolean init(final Expression<?>[] exprs, final int matchedPattern, final Kleenean isDelayed, final ParseResult parseResult) {
-		duration = (Expression<Timespan>) exprs[0];
+		setDuration((Expression<Timespan>) exprs[0]);
 		return true;
 	}
 	
@@ -73,7 +73,7 @@ public class Delay extends Effect {
 		final TriggerItem next = getNext();
 		if (next != null) {
 			delayed.add(e);
-			final Timespan d = duration.getSingle(e);
+			final Timespan d = getDuration().getSingle(e);
 			if (d == null)
 				return null;
 			Bukkit.getScheduler().scheduleSyncDelayedTask(Skript.getInstance(), new Runnable() {
@@ -102,7 +102,15 @@ public class Delay extends Effect {
 	
 	@Override
 	public String toString(final @Nullable Event e, final boolean debug) {
-		return "wait for " + duration.toString(e, debug) + (e == null ? "" : "...");
+		return "wait for " + getDuration().toString(e, debug) + (e == null ? "" : "...");
+	}
+
+	public Expression<Timespan> getDuration() {
+		return duration;
+	}
+
+	public void setDuration(Expression<Timespan> duration) {
+		this.duration = duration;
 	}
 	
 }

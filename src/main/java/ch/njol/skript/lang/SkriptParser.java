@@ -1058,7 +1058,7 @@ public class SkriptParser {
 							if (j == start || pattern.charAt(j) == '|') {
 								int mark = 0;
 								if (j != pattern.length() - 1 && ('0' <= pattern.charAt(j + 1) && pattern.charAt(j + 1) <= '9' || pattern.charAt(j + 1) == '-')) {
-									final int j2 = pattern.indexOf('Â¦', j + 2);
+									final int j2 = pattern.indexOf('¦', j + 2);
 									if (j2 != -1) {
 										try {
 											mark = Integer.parseInt(pattern.substring(j + 1, j2));

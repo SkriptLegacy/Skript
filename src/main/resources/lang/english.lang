@@ -1,7 +1,7 @@
 # Default English language file
 
 # Which version of Skript this language file was written for
-version: ${project.version}
+version: 2.1.2
 
 # -- General --
 and: and
@@ -222,7 +222,6 @@ enchantments:
 		luck: Luck of the Sea
 		unknown_enchant_62: Lure
 		lure: Lure
-		unknown_enchant_8: Depth Strider
 
 # -- Potion Effects --
 potions:
@@ -773,7 +772,6 @@ game modes:
 	survival: survival
 	creative: creative
 	adventure: adventure
-	spectator: spectator
 
 # -- Visual Effects --
 visual effects:
